@@ -1,0 +1,358 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Container geral para limitar a largura máxima */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header: Estilização da logo, do menu e do menu hamburguer */
+header {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    border-bottom: 2px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+/* Ícone do menu hamburguer */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px;
+    transition: all 0.3s;
+}
+
+/* Estilos do menu de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li:hover > .submenu {
+    display: block;
+}
+
+/* Submenu padrão (escondido) */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    top: 100%;
+    left: 0;
+    width: max-content;
+    z-index: 1000;
+}
+
+/* Submenu ativo em dispositivos móveis */
+.submenu-active {
+    display: block;
+    position: static;
+    width: 100%;
+    box-shadow: none;
+}
+
+
+.submenu li a {
+    padding: 10px 15px;
+}
+/* Seção Hero */
+.hero {
+    max-width: 1140px;
+    position: relative;
+    width: 100vw;
+    height: 400px;
+    margin: auto;
+    background-color: #f3f3f3;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Seção de Introdução aos Serviços */
+.container-services h2{
+    margin-bottom: 20px;
+}
+.intro-services {
+    padding: 50px 20px;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+.intro-services p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* Seções Detalhadas de Serviços */
+.service-detail {
+
+    max-width: 1140px;
+    width: 100vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.service-detail .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.service-detail img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 5px;
+    margin-right: 20px;
+
+}
+
+.service-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.service-text {
+    max-width: 600px;
+}
+
+.service-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff5722;
+}
+
+.service-text p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.service-text ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.service-text ul li {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.service-text .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.service-text .btn:hover {
+    background-color: #e64a19;
+}
+
+#section-order-one{
+    order: 2;
+}
+
+#section-order-too{
+    order: 1;
+}
+
+#section-order-tree{
+    order: 3;
+}
+
+#section-order-for{
+    order: 4;
+}
+
+#section-order-five{
+    order: 6    ;
+}
+
+#section-order-six{
+    order: 5;
+}
+
+#section-order-seven{
+    order: 7;
+}
+
+#section-order-eigth{
+    order: 8;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .service-detail img {
+        margin: 0 auto 20px;
+        width: 100%;
+    }
+
+    .service-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-text {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+}
+
+/* Rodapé (Footer) */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column {
+    width: 300px;
+}
+
+.footer-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ff5722;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ff5722;
+}
+
+.footer-column img {
+    width: 30px;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #ff5722;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #e64a19;
+}
+
+/* Botão Flutuante do WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+.whatsapp-float:hover img {
+    transform: scale(1.1);
+}
